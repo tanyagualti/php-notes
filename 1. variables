@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="text-align: center;font-size: 30px;">
+<?php
+
+echo "radhaswami!!!<br>";
+
+ECHO "php is not case sensitive language <br>";
+//no need to define which type of varible you declare in php
+$vari1=10;
+echo $vari1."<br>";
+$vari2=20;
+//.is use for concatenation in php
+echo $vari1+$vari2."<br>";
+echo $vari1-$vari2."<br>";
+
+//concatenate string with dot
+$name1="tanya";
+$name2="gulati";
+
+echo $name1.$name2;
+
+?>
+</body>
+</html>
