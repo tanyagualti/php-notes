@@ -27,6 +27,19 @@ print "yahoo <br>";
 print "yahoo"."baba<br>";
   //print "yahoo","baba"; multiple statements in print is not allowed it gives error
 print 33;
+
+
+
+//we can use echo()or echo"" //we can use print() or print""
+
+//print has return value 1 and echo has no return value
+
+//$value=echo("tanya<br>"); not valid it gives error bcz echo has no return value
+//echo $value;
+
+$value=print("tanya<br>");
+echo $value;//print has return vaue 1
+
 ?>
 </body>
 </html>
