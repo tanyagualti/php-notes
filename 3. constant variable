@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="text-align: center;font-size: 30px;">
+
+
+<?php
+
+//variable variable ki value ko hum kbhi bhi change kr skte hai
+
+$x=10;
+$x=20;
+$x="tanya";
+echo $x; //ans is tanya
+
+
+//constant variable
+
+//syntax:define("name",value,case-insensitive)
+//case-insensitive parameter is by default false 
+//agr false hai toh yeh case-sensitive 
+//agr yeh true hai toh case sensitive nhi hai
+
+//constant variable are global variable it is not used 
