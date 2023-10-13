@@ -12,7 +12,7 @@
 //first way
 $a=11;
 ($a >10) ? $z="true":$z="fasle";
-echo $z;
+echo "the value is:".$z,"<br>";
 
 
 //second way
