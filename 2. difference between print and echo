@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="text-align: center;font-size: 30px;">
+
+
+<?php
+
+//difference between . and ,
+//,is used jb ek hi sath bhut sare msg dikhana chahte hai toh , ka use kr skte hai
+
+//.is used for concatenation
+echo "yahoo","baba<br>";//this is two seperate statements
+echo "yahoo"."baba<br>";//concatenation but this is consider as one statement
+echo 'yahoo baba<br>';
+echo 21,"<br>";
+
+
+
+//print statement
+
+print "yahoo <br>";
+print "yahoo"."baba<br>";
+  //print "yahoo","baba"; multiple statements in print is not allowed it gives error
+print 33;
+?>
+</body>
+</html>
