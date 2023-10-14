@@ -1,3 +1,8 @@
+//the actual parameter passed values to a function
+//the formal parameter reveived values by a function
+
+
+//in call by value here value of actual parameter will be copied to formal parameters and these two different parameters store values in different locations isilye actual value pr koi effect mhi pdhta qki changes copy pr hote hai
 <!DOCTYPE html>
 <html>
 <head>
