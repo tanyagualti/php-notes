@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="text-align: center;font-size: 30px;">
+
+
+<?php
+
+//difference between call by value and call by reference
+
+//call by value
+function fun($a){//this is formal parameter agr formal parameter me hum koi bhi change krte hai toh hmare actual parameter me change nhi hota hai //10 asigns to a varibale and a variable contains 10 but now we change the value of a 20; but variable b has no effect bcz a and b are different variable  .ans is10
+   
+    $a=20;
+
+	
+}
+
+  $b=10;
+  fun($b);//b has the 10 
+  echo $b;
+echo "<br>";
+
+
+
+//call by reference
+//agr hum formal parameter me change krte hai toh yha actual parameter me bhi change honge
+  function sun(&$x){ //and x contains the address of y 
+
+echo "<br>";
+  	$x=200;//when x me 200 asign hue address me jake change hue bcz x has the address of y
+  //	thats why ans is 200
+
+  }
+  $y=100;
+  sun($y);// parameter is 100
+  echo $y;
+  echo "<br>";
+?>
+</body>
+</html>
