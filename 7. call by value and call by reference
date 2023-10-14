@@ -3,6 +3,8 @@
 
 
 //in call by value here value of actual parameter will be copied to formal parameters and these two different parameters store values in different locations isilye actual value pr koi effect mhi pdhta qki changes copy pr hote hai
+
+//actual and formal parameters refers to same memory location therefore any changes made to the formal paraeters will get reflecteed to actual parameters. isme copy nhi hota direct original vlaue pr bhi chnages ka effect pdhta hai
 <!DOCTYPE html>
 <html>
 <head>
