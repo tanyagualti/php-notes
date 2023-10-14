@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="text-align: center;font-size: 30px;">
+
+
+<?php
+
+//arrays
+//php allow that ek array me hum different datatypes ki value bhi store kr skte hai compulsory nhi hai ki similar data type ki values hi store ho
+
+//first way
+$b=[10,"manya","8298.676"];
+echo $b[2];
+//second way
+$a=array(10,"tanya",3.980);
+echo $a[1]."<br>";
+
+//other way for print the array for testing array is there or not or whatever 
+//only for testing purpose
+
+//pre tag is use for increase the readability of this function convert horizontal to vertical
+
+//pre tag is html tag
+
+echo "<pre>";
+print_r($a);
+echo "</pre>";
+
+
+//third way
+
+
+$c[0]="red";
+$c[1]="blue";
+$c[2]="pink";
+$c[3]="yellow";
+
+
+echo "<pre>";
+print_r($a);
+echo "</pre>";
+
+echo "<ul>";
+for($i=0;$i<3;$i++){
+	echo "<li> $c[$i] </li>";
+}
+
+echo "</ul>";
+?>
+
+
+
+</body>
+</html>
