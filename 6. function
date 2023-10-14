@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="text-align: center;font-size: 30px;">
+
+
+<?php
+
+function run(){//function definition 
+	echo ("wow you are<br>");
+}
+
+run();//call a function
+echo ("string<br>");
+run();
+
+//parameterised function
+
+function fun($a,$b)
+{
+	echo "the sum is:".$a+$b."<br>";
+}
+
+fun(10,20);
+
+//function with return value
+
+function sun($x,$y){
+	return $x+$y."<br>";
+}
+
+$result=sun(30,40);
+echo $result;
+
+?>
+</body>
+</html>
