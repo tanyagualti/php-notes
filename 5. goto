@@ -21,6 +21,8 @@ for($i=1;$i<=10;$i++){
 	
 	
 }
+
+echo "hello"; //this code will not executed bcz goto directly jump on abc: label
 abc:
 	echo "this is new code";
 ?>
