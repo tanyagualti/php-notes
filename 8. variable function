@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="text-align: center;font-size: 30px;">
+
+
+<?php
+
+//variable function is working same as normal functions but hum us function ko ek variable ko asign kr denge aur fir us function ko directly call na krke us variable k thorugh call krnge
+
+function wow(){
+	echo "tanya";
+}
+
+$myfunc="wow";//wow function is assign to myfunc varibale
+
+$myfunc();
+
+
+
+
+?>
+</body>
+</html>
