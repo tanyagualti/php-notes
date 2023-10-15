@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="font-size: 20px;text-align: center;">
+
+	
+
+<?php
+
+function fun(){
+	$a=10;//local variable 
+	echo $a,"<br>";//print in there scop
+}
+
+fun();
+
+function run(){
+	$b=10;//local variable 
+
+}
+//echo $b;//print after the method  it gives error bcz local variable print only in there scop
+run();
+
+$vari=200;//global variable
+
+function nun(){
+
+global $vari;
+ echo $vari,"<br>";//we can also access the global variable in method but we have to tell that this is global varibale through global keyword
+
+}
+echo $vari."<br>";//we can print global varibale in whole program
+nun();
+
+
+$val=400;
+function sun(){
+$val=200;
+echo $val,"<br>";//200
+
+}
+echo $val,"<br>";//400
+sun();
+
+
+$val2=900;
+function sun1(){
+	global $val2;//we change the value of global variables 
+    $val2=800;//in this we change the value 900 to 800
+    echo $val2,"<br>";//800
+
+}
+echo $val2,"<br>";//900
+sun1();//after calling the methord val2 value permanent is 800
+echo $val2,"<br>";//800
+?>
+	
+
+
+
+</body>
+</html>
