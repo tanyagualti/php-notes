@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="font-size: 20px;text-align: center;">
+
+	
+
+<?php
+
+//for each with indexed array
+$arr=[10,20,30,40];
+
+//syntax:foreach(array_name  as  new_variable) foreach loop works on values not index toh foreach loop hr ek array ki value k liye chlega and ek ek value $value variable me store hoti rhegi aur print hoti rhegi
+foreach ($arr as $value) {
+	echo $value."<br>";
+}
+
+
+//foreach loop with associative array
+$age=array(
+      "tanya"=>23,
+      "manya"=>21,
+      "khushi"=>90
+);
+foreach($age as $keyss =>$val){//agr hme value k sth keys bhi show krni hai toh hme values k sth keys k liye bhi ek varibale  lena pdhenga
+	echo $keyss."=".$val."<br>";
+}
+?>
+	
+
+
+
+</body>
+</html>
