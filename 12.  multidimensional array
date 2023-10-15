@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="font-size: 20px;text-align: center;">
+
+	
+
+<?php
+
+
+
+
+
+$age=array(//this is outer array aur iske andr kafi sare arrays aynge
+	array(1,"tanya",4000),
+	array(2,"manya",3000),
+	array(3,"sanya",9000)
+      
+);
+
+echo $age[0][0];
+echo "<br>";
+
+
+foreach ($age as $v1)
+ {
+ 	foreach($v1 as $v2){
+      echo $v2 ."  ";
+ 	}
+	echo "<br>";
+}
+?>
+	
+
+
+
+</body>
+</html>
