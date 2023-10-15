@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="font-size: 20px;text-align: center;">
+
+	
+
+<?php
+
+$age=array(
+
+	"bill"=>25,
+	"tanya"=>22.55,//float data type
+	"manya"=>"19"//this is string so there datatype is string
+
+);
+echo $age["bill"]."<br>";
+//after assigning the value of array we change the reassign the value look how
+$age["bill"]=90;
+echo $age["bill"]."<br>";
+
+
+
+
+echo "<pre>";
+print_r($age);
+echo "</pre>"."<br>";
+
+// if we want to see the data type of values so we use
+              //var_dump
+               echo "<pre>";
+              var_dump($age);
+              echo "</pre>";
+
+?>
+	
+
+
+
+</body>
+</html>
