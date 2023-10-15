@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="font-size: 20px;text-align: center;">
+
+	
+
+<?php
+
+//both function functionality is same only methods name is changed
+//count() function
+$arr=array(10,20,30,40);
+$result=count($arr);
+echo $result."<br>";
+
+//sizeof() function
+$arr1=array(10,20,30,40);
+$result1=sizeof($arr1);
+echo $result1."<br>";
+
+
+//use multi dimension associative array
+
+$food=array(
+
+'fruits'=>array('orange','banana','apple'),
+'veggie'=>array('carrot','collard','pea')
+);
+
+$size=count($food); 
+echo $size."<br>";//ans 2 
+//but if we want to get the all values also in inner arrays so we use the one more parameter that is mode by default mode is 0 so we have to change the 1
+
+$size2=count($food,1);
+echo $size2;
+
+//third function is also there for counting the arrays 
+
+//echo array_count_values($size);//this is function not return the value its return the array so this statement give error
+
+$a=array_count_values($arr1);
+print_r($a);
+?>
+</body>
+</html>
