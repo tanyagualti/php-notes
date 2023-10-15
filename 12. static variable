@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="font-size: 20px;text-align: center;">
+
+	
+
+<?php
+//static variable
+//locally
+echo "first method<br>";
+function fun(){
+	$a=10;
+	$a++;
+	echo $a."<br>";
+}
+fun();
+fun();//in that we expect the result 12 bcz second time hmne fun function cll kiya hai first tym inc hoke 11 hua fir second time inc hoke 12 hona chiye tha but yeh islia nhi hua qki local variable apna kam ktm hone k bd memory s free ho jata hai value retain nhi krke rkhta lambe time tk bcz iska scope hi function tk hai toh jb hmne second time call kiya toh $a ki value 10 hi thi 11 nhi qki 
+
+
+//toh expected result lene k liye hme static keyword ka use krna pdega static variable value ko after the function bhi retain krke rkhta hai jb tk program finish nhi ho jata 
+echo "second method<br>";
+function fun1(){
+	static $a1=10;
+	$a1++;
+	echo $a1."<br>";
+}
+fun1();
+fun1();
+
+
+//globally 
+//it is not executed its only for understanding
+class Ram{
+	static $u=10;//this is global variable it is only one for whole class that's why it is also called class variable 
+
+	function sun(){
+		echo "this is sun function";
+	}
+	$name;
+	$age;
+
+}
+
+?>
+	
+
+
+
+</body>
+</html>
