@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="font-size: 20px;text-align: center;">
+<!-- get s data send krnge toh name age sb url me show hoga jo safe nhi hai so post method me nhi hoga show -->
+	<form action="textform.php" method="get">
+		
+   <label>Name:</label>
+   <input type="text" name="fname">
+   <br>
+   <label>age:</label>
+   <input type="text" name="age">
+   <br>
+   <input type="submit" name="save">
+	</form>
+
+<?php
+
+//php has super global variable yeh hum tb use krte hai jb hme ek file me bnaya hua variable dusri file me use krna hota hai
+
+//$_GET  $_POST $_REQUEST  $_SERVER   $_SESSION  $_COOKIE   $_FILES  (these are super global variable in php)
+
+
+//about $_GET and $_POST   is used basically used in forms
+?>
+</body>
+</html>
+
+
+
+
+//second file textform.php
+
+
+<?php
+
+// jo bhi data form s aya hai vo array me convert ho gya hoga toh array ko print krne k liye for testing we use print_r method
+echo "<pre>";
+print_r($_GET);
+// $_GET is used to print the form values
+echo "</pre>";
+ //PHP $_GET is a PHP super global variable which is used to collect form data after submitting an HTML form with method="get".
+
+
+?>
