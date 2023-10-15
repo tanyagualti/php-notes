@@ -25,14 +25,16 @@ $age=array(//this is outer array aur iske andr kafi sare arrays aynge
 echo $age[0][0];
 echo "<br>";
 
-
+echo "<table border='2ps'>";
 foreach ($age as $v1)
  {
+ 	echo "<tr>";
  	foreach($v1 as $v2){
-      echo $v2 ."  ";
+      echo "<td>$v2 </td>";
  	}
-	echo "<br>";
+	echo "</tr>";
 }
+echo "</table>";
 ?>
 	
 
