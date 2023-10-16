@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="font-size: 20px;text-align: center;">
+
+<?php
+//work of both function die() and exit() is same we can use anyone
+echo "1. some msg <br>";
+echo "2. some msg <br>";
+echo "3. some msg <br>";
+echo "<h1 style='color:red;'>";
+die("unsucessfull??????");//exit("error");
+echo "</h1>";
+//after using die() method 4 and 5 statement will not executed
+echo "4. some msg <br>";
+echo "5. some msg <br>";
+
+
+
+
+?>
+</body>
+</html>
