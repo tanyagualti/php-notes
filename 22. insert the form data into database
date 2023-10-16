@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="font-size: 20px;text-align: center;">
+
+
+
+<form action="textform.php" method="get">
+	
+id:<input type="text" name="id"><br>
+name:<input type="text" name="name"><br>
+address:<input type="text" name="address"><br>
+class:<input type="text" name="class"><br>
+phoneno:<input type="text" name="phoneno"><br>
+<input type="submit" name="submit">
+</form>
+</body>
+</html>
+
+
+//second php file
+
+
+<?php
+
+echo $id=$_GET['id'];
+echo $name=$_GET['name'];
+echo $address=$_GET['address'];
+echo $class=$_GET['class'];
+echo $phone=$_GET['phoneno'];
+
+$conn=mysqli_connect("localhost","root","","crud");
+$sql="insert into student (sid,sname,saddress,sclass,sphone) values('{$id}','{$name}','{$address}','{$class}','{$phone}')";
+$result=mysqli_query($conn,$sql) or die("query unsucessfull");
+
+header("location:http://localhost/php file/index.php");
+mysqli_close($conn);
+
+
+
+?>
