@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="text-align: center;font-size: 30px;">
+
+
+<?php
+/*php mysqli fetch functions:
+1. mysqli_fetch_assoc() = yeh method associative array fetch krke lata hai
+2. mysqli_fetch_array()
+3. mysqli_fetch_row()
+4. mysqi_fetch_all()
+5. mysqli_fetch_field()*/
+
+//database connection
+
+$conn=mysqli_connect("localhost","root","","crud");
+
+$sql="select * from student";
+$result=mysqli_query($conn,$sql);
+
+// mysqli_fetch_assoc()
+//yeh method ek bari me ek hi result fetch krta hai toh yeh first line print krke le ayega aur row nam ka variable associative array bn jyga
+$row=mysqli_fetch_assoc($result);
+// jb hum fetch_assoc lgate hai toh print krne pr uski keys bhi nzr ati hai
+echo "<pre>";
+print_r($row);
+echo "</pre>";
+
+//toh yeh method sirf ek hi row ko ek time pr lata hai toh hme sari values dekhne k liye loop lagana pdega
+
+while($row2=mysqli_fetch_assoc($result)){
+	echo "<pre>";
+print_r($row2);
+echo "</pre>";
+}
+
+
+
+
+?>
+</body>
+</html>
