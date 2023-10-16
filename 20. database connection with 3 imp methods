@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="font-size: 20px;text-align: center;">
+
+<?php
+//main three function for database connectivity
+//mysql_connect() is also there but this method is slow than mysqli so we have to use for better performance mysqli_connect()
+//1. mysqli_connect(server_name,user_name,password,database_name);
+//2. mysqli_query(connection_name,sql_query);
+//3. mysqli_close(connection_name);
+
+
+$conn=mysqli_connect("localhost","root","","crud") or die("unsucessfull connection");
+$sql="select * from student";
+
+$result=mysqli_query($conn,$sql);
+
+//this is for just check that which array is return by mysqli_query()
+// echo "<pre style='font-size:40px;'>";
+// print_r($result);
+// echo "</pre>";
+//check finish
+while($row=mysqli_fetch_assoc($result)){
+?>
+
+
+<h1> <?php echo $row['sid'];?></h1>
+<h1><?php echo $row['sname'];?></h1>
+<h1><?php echo $row['saddress'] ;?></h1>
+<h1><?php echo $row['sclass'];?></h1>
+<h1><?php echo $row['sphone'];?></h1>
+<hr>
+<?php } ?>
+</body>
+</html>
