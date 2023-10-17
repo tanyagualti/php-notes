@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="text-align: center;font-size: 30px;">
+
+<!-- PHP_SELF is the key yeh batata hai ki form ka data submit hone k bd bhi yhi pr rhega next page pr nhi jayga-->
+<form action="<?php $_SERVER['PHP_SELF']?>" method="post">
+	
+id:<input type="text" name="id"><br>
+name:<input type="text" name="name"><br>
+address:<input type="text" name="address"><br>
+class:<input type="text" name="class"><br>
+phoneno:<input type="text" name="phoneno"><br>
+<input type="submit" name="submit">
+</form>
+
+<?php
+//usi page pr form hoke usi page pr print krna data yeh possible hua hai $_SERVER s 
+
+if(isset($_POST['submit'])){
+    echo $_POST['id'];
+	echo $_POST['name'];
+	echo $_POST['address'];
+	echo $_POST['class'];
+	echo $_POST['phoneno'];
+}
+
+
+?>
+</body>
+</html>
