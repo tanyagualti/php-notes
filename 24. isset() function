@@ -1,0 +1,13 @@
+<?php
+
+//isset() method
+$test="hello";
+//yeh ek test nam ka variable hai ab hme yeh check krna hai ki isme koi value set hai bhi ya nhi toh iske liye ek method hai isset()
+
+// yeh function two type ki value return krta hai 0 and 1  0=false,1=true   is function s hum yeh check kr skte hai ki variable ki value set hai ya nhi
+
+echo isset($test) ;//it gives 1 bcz value is there
+
+
+
+?>
