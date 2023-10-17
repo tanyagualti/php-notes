@@ -20,7 +20,8 @@ phoneno:<input type="text" name="phoneno"><br>
 
 <?php
 //usi page pr form hoke usi page pr print krna data yeh possible hua hai $_SERVER s 
-
+//isset ki value one aygi tbi data print hoga aur 1 tb hoygi jb submit pr click krnge
+echo isset($_POST['submit'])."<br>";
 if(isset($_POST['submit'])){
     echo $_POST['id'];
 	echo $_POST['name'];
