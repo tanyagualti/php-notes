@@ -1,0 +1,55 @@
+//this is that part in which we see the details of server
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="text-align: center;font-size: 30px;">
+
+
+<form action="tan.php" method="get">
+	
+id:<input type="text" name="id"><br>
+name:<input type="text" name="name"><br>
+address:<input type="text" name="address"><br>
+class:<input type="text" name="class"><br>
+phoneno:<input type="text" name="phoneno"><br>
+<input type="submit" name="submit">
+</form>
+
+<?php
+
+
+//database connection
+
+$conn=mysqli_connect("localhost","root","","crud");
+
+$sql="select * from student";
+$result=mysqli_query($conn,$sql);
+
+// $_SERVER  global super variable iska use hum tb krte jb hme data ki information k alawa uski baki information ko kese receive kr skte hai ex. http connection kon sa hai yeh check krna chahte hai yaa server ki info dekhna chahte hai toh $_SERVER ka use krte hai
+/*
+get info:-
+ http connection
+ server information
+ host information
+ url information
+*/
+
+// hmne post aur get me dekha tha ki form ka data hm kese dusre page pr leke ate hai $_SERVER me dekhnge ki form ka data kese usi page me database k andr store kra skte hai 
+ // ap kisi dusre page ko use nhi krna chahte isi ek page s kam krna chahte hai tb bhi $_SERVER ka use kr skte hai
+
+
+?>
+</body>
+</html>
+
+
+//second file 
+<?php
+echo "<pre>";
+print_r($_SERVER);
+echo "</pre>";
+?>
