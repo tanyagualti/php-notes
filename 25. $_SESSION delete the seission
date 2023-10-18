@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="text-align: center;font-size: 30px;">
+
+<?php
+//create 
+
+   session_start();
+   $_SESSION["username"]="tanya";
+   echo "session is created";
+
+
+   
+?>
+</body>
+</html>
+
+
+//other php file
+   //delete
+<?php
+
+
+
+
+session_start();
+// hme phle variable delete krne hi pdenge tbi session delete hoga session kbhi bhhi direct delete nhi hota unset use to delete all variable
+session_unset();
+session_destroy();//distroy session
+echo "session delete";
+?>
