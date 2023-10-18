@@ -1,0 +1,60 @@
+
+//index.html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="text-align: center;font-size: 30px;">
+
+<?php
+
+//create the session
+   session_start();
+   $_SESSION["username"]="tanya";
+   echo "session is created";
+?>
+</body>
+</html>
+
+
+//this created session show in other page session_view.php
+
+//no need to create agian and again session create only once and we can use again and again
+
+<?php
+
+
+// $_COOKIES isme jb user website pr login krta hai toh uski details user k computer pr tempreroryly store ho jati hai  
+//  $_SESSION  its is same like $_COOKIES but isme information user k system me nhi server pr save hoti hai temproryly
+
+
+//  $_COOKIES and $_SESSION both are same but ek me user ki details user k system me save hoti hai aur ek me server me temprerory 
+
+
+// aur jo information server pr store ki jati hai use khte hai session store yeh temprerory store hotu hai agr permanent store krna hai toh hum mysql use krnge      humm is information ko kbhi server s get krke use kr skte hai     in sb ka use hota hai login page pr 
+
+//  steps to create sessions in php 
+
+//  step-1:session_start(); 
+// step-2:$_SESSION[name]=value;//session create
+// step-3:echo $_SESSION[name];//get session value -->
+
+
+//  age hme session ko hme create krne k bd bar bar kisi page pr dekhna hai toh toh br br create krne ki jrurrt nhi vo chuka hai us tym hum session start krne ans echo;
+
+
+
+//   now steps for delete the sessions 
+
+//    step-1:session_unset();remove all session variable yeh us session k sare variables ko delete kr dega
+
+//   step-2:session_destroy();yeh session ko remove krta hai
+
+
+
+session_start();
+echo $_SESSION["username"];
+?>
