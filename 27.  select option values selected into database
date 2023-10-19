@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<form action="<?php $_SERVER['PHP_SELF']?>" method="post">
+		
+<select name="name">
+	<option>select name</option>
+	<option value="tanya">tanya</option>
+	<option value="manya">manya</option>
+<option value="khushi">khushi</option>
+<option value="himanshi">himanshi</option>
+</select>
+<input type="submit" name="submit">
+
+	</form>
+<?php
+
+
+//database connection
+
+$conn=mysqli_connect("localhost","root","","crud");
+
+
+if(isset($_POST['submit'])){
+
+$name=$_POST['name'];
+$sql="insert into sell (name) values ('{$name}')";
+
+// $sql="insert into sell (name) values ('tanya')";
+$result=mysqli_query($conn,$sql);
+if($result){
+	echo "data insert";
+}
+}
+
+
+?>
+</body>
+</html>
