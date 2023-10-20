@@ -1,0 +1,128 @@
+<------------------------------------------------file name doctor.php---------------------------------------------------->
+<---------------this code is for form doctor name fills and submit button------------------------------------------>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+<form method="post" action="welcome.php">
+	
+<input type="text" name="name" placeholder="doctor name">
+<input type="submit" name="submit">
+
+</form>
+
+</body>
+</html>
+
+  <------------------------------------file name welcome.php----------------------------------------->
+  <-----------------all doctor details like name are come in this file bcz form action is welcome.php----------------->
+
+  <?php
+
+
+
+
+$conn=mysqli_connect("localhost","root","","practice");
+echo $name=$_POST['name'];
+$sql="insert into doctor (d_name) values ('$name')";
+//this insert the value of name in doctor table 
+mysqli_query($conn,$sql);
+
+
+
+?>
+
+
+<---------------------------file name appointment.php----------------------------------------->
+<--------------this form is for get appointment from doctors-------------------------->
+
+  <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<form action="appoin.php" method="post">
+	<input type="text" name="username" placeholder="username">//this input is use for patient name jisko appointment lni hai 
+
+
+<select name="doctor-select">//this is use for select the doctor which is available in the hospital so we have to make dynamic this fild 
+  //bcz new doctors are come any time so jo bhi enter krega vo doctor k dashboard pr login krega aur uska data database me chala jayga
+  //aur fir hum option select drop down s sare doctors ka nam yha dynamically print krwa denge
+	<option>select</option>
+
+  //use php code for this  php code ko khi bhi ktm aur khi bhi shuru kr skte hai 
+	<?php
+     
+     $conn=mysqli_connect("localhost","root","","practice");
+     $query1="select * from doctor";//select the doctors details from database
+$result=mysqli_query($conn,$query1);//execute query
+     
+if(mysqli_num_rows($result)>0){ //check krna hai agr result me ek bhi row hui toh hi if me entry hogi
+  while($rows=mysqli_fetch_assoc($result)){// aur yeh bar bar hr doctor ka nam add hoga toh loop legega aur fetch funcion is ek ek krke row ayngi row variable me
+        	?>//php close rows me ek assoc array aya hoga with key aur usi keys ka use krke option me doctor name and id echo kr rhe hai
+    <option value="<?php echo $rows['d_id']?>"><?php echo $rows['d_name']?></option>  //bcz hme html likhni thi islia php close ki
+    //this values is pick from database table toh usi doc table ki d_id d_name jo us table me column k nam likhe honge yha bhi yhi likhnge
+        	<?php //php start bcz id ka closing paranteis aur loop ka cloding bracket lgana tha which is only allow in php not html
+        	 }
+     }
+    //option me bhle hi ap doctor ka nam select kro lkin return whi hoga jo apne value me de rkha hai yha hme id de rkhi toh vo aygi database me
+
+	?>
+
+
+</select>
+
+	<input type="submit" name="submit">
+
+
+
+</form>
+</body>
+</html>
+
+    <-------------------------------------file name appoin.php-------------------------------------------------------->
+
+    <------------------------------appoinment details insert into database------------------------------------>
+    <?php
+
+echo $username=$_POST['username'];
+echo $did=$_POST['doctor-select'];
+
+$conn=mysqli_connect("localhost","root","","practice");
+$sql="insert into appointment (username,d_id) values ('$username','$did')";
+mysqli_query($conn,$sql);
+
+
+
+
+?>
+
+
+  <---------------------------database table and their columns and keys---------------------------------------->
+
+table name:doctor
+  column1:d_id primary key
+  column2:d_name
+
+
+  seocnd table name:appointment
+    column1:a_id primary key
+    column2:username
+    column3:d_id foreign key
+
+
+
+
+
+
+
+    
+    
