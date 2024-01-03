@@ -1,0 +1,60 @@
+<?php
+//session as an array
+session_start();
+
+//session me sirf ek array ki values dalni hai toh [0][1] ki jrurt nhi otherwise session array ko position k according values deni pdengi
+$_SESSION['cart']=array('item'=>'top','quantity'=>'1');
+print_r($_SESSION['cart']);
+
+
+
+
+// The contents of the 'product' session variable (which now contains multiple arrays) are displayed using print_r().
+
+//isme more than one array ek me hi dalna hai toh hme ek ek block me dalna hoga
+$_SESSION['product'][0]=array('name' => 'bag','price'=>'2000');
+$_SESSION['product'][1]=array('name' => 'box','price'=>'4000');
+$_SESSION['product'][2]=array('name' => 'bottle','price'=>'3000');
+
+echo "<pre>";
+print_r($_SESSION['product']);
+echo "</pre>";
+echo "<br>";
+print_r($_SESSION['product'][0]['name']);
+print_r($_SESSION['product'][2]['price']);
+echo "<br>";
+
+
+
+
+
+
+
+
+
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<a href="sse1.php">click me</a>
+</body>
+</html>
+
+
+
+
+
+sse1.php
+<?php
+session_start();
+echo "<pre>";
+print_r($_SESSION['product']);
+echo "</pre>";
+unset($_SESSION['product']);
+?>
